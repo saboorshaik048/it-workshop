@@ -1,0 +1,481 @@
+user@saboor-k:~$ whoami
+user
+user@saboor-k:~$ id
+uid=1000(user) gid=1000(user) groups=1000(user),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),132(lxd),133(sambashare)
+user@saboor-k:~$ groupd
+Command 'groupd' not found, did you mean:
+  command 'groups' from deb coreutils (9.1-1ubuntu2)
+Try: sudo apt install <deb name>
+user@saboor-k:~$ groups
+user adm cdrom sudo dip plugdev lpadmin lxd sambashare
+user@saboor-k:~$ who
+user     seat0        2024-04-02 20:40 (login screen)
+user     tty2         2024-04-02 20:40 (tty2)
+user@saboor-k:~$ last
+user     tty2         tty2             Tue Apr  2 20:40   still logged in
+user     seat0        login screen     Tue Apr  2 20:40   still logged in
+reboot   system boot  6.5.0-25-generic Tue Apr  2 20:39   still running
+user     tty2         tty2             Mon Apr  1 21:19 - down   (01:11)
+user     seat0        login screen     Mon Apr  1 21:19 - down   (01:11)
+reboot   system boot  6.5.0-25-generic Mon Apr  1 21:18 - 22:31  (01:12)
+user     tty2         tty2             Mon Apr  1 11:13 - down   (00:55)
+user     seat0        login screen     Mon Apr  1 11:13 - down   (00:55)
+reboot   system boot  6.5.0-25-generic Mon Apr  1 11:12 - 12:08  (00:55)
+user     tty2         tty2             Mon Apr  1 11:09 - down   (00:01)
+user     seat0        login screen     Mon Apr  1 11:09 - down   (00:01)
+reboot   system boot  6.5.0-25-generic Mon Apr  1 11:08 - 11:10  (00:01)
+user     tty2         tty2             Sun Mar 31 21:33 - down   (02:18)
+user     seat0        login screen     Sun Mar 31 21:33 - down   (02:18)
+reboot   system boot  6.5.0-25-generic Sun Mar 31 21:33 - 23:52  (02:18)
+user     tty2         tty2             Sun Mar 31 20:36 - down   (00:34)
+user     seat0        login screen     Sun Mar 31 20:36 - down   (00:34)
+reboot   system boot  6.5.0-25-generic Sun Mar 31 20:36 - 21:11  (00:35)
+
+wtmp begins Wed Jan 10 08:19:20 2024
+user@saboor-k:~$ nslookup google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+** server can't find google.com: SERVFAIL
+
+user@saboor-k:~$ cd Desktop
+user@saboor-k:~/Desktop$ mkdir newfile
+user@saboor-k:~/Desktop$ rmdir newfile
+user@saboor-k:~/Desktop$ 
+user@saboor-k:~/Desktop$ top
+
+top - 21:22:02 up 42 min,  2 users,  load average: 0.27, 0.27, 0.27
+Tasks: 240 total,   1 running, 238 sleeping,   0 stopped,   1 zombie
+%Cpu(s):  3.0 us,  0.8 sy,  0.0 ni, 96.2 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :   7711.1 total,   2708.9 free,   3180.9 used,   3055.6 buff/cache     
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   4530.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                
+   1893 user      20   0 5433412 317264 145448 S   5.7   4.0   2:07.73 gnome-shell                                                                            
+   5292 user      20   0  786976  65736  51340 S   3.3   0.8   0:07.10 gnome-terminal-                                                                        
+   4275 user      20   0 2808500 277448 113692 S   2.3   3.5   2:03.05 Isolated Web Co                                                                        
+   3894 user      20   0   11.7g 420764 220484 S   1.7   5.3   4:30.37 firefox                                                                                
+    840 mysql     20   0 2375896 396488  35840 S   0.7   5.0   0:17.16 mysqld                                                                                 
+     15 root      20   0       0      0      0 S   0.3   0.0   0:00.35 ksoftirqd/0                                                                            
+    155 root     -51   0       0      0      0 S   0.3   0.0   0:07.91 irq/163-SYNA7DAB:00                                                                    
+    554 systemd+  20   0   90564   7424   6656 S   0.3   0.1   0:00.08 systemd-timesyn                                                                        
+   2061 user      20   0  388656  11920   6912 S   0.3   0.2   0:03.17 ibus-daemon                                                                            
+   2280 user      20   0  422540  28976  18544 S   0.3   0.4   0:02.04 ibus-extension-                                                                        
+   5266 root      20   0       0      0      0 I   0.3   0.0   0:00.33 kworker/0:2-events                                                                     
+      1 root      20   0  169676  12912   8944 S   0.0   0.2   0:01.02 systemd                                                                                                              
+user@saboor-k:~/Desktop$ ps
+    PID TTY          TIME CMD
+   5323 pts/0    00:00:00 bash
+   5521 pts/0    00:00:00 ps
+user@saboor-k:~/Desktop$ date
+Tuesday 02 April 2024 09:24:35 PM IST
+user@saboor-k:~/Desktop$ cal
+Command 'cal' not found, but can be installed with:
+sudo apt install ncal
+user@saboor-k:~/Desktop$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             789624     2244    787380   1% /run
+/dev/nvme0n1p2 244506940 47906712 184107172  21% /
+tmpfs            3948108        0   3948108   0% /dev/shm
+tmpfs               5120        8      5112   1% /run/lock
+efivarfs             184      135        45  76% /sys/firmware/efi/efivars
+/dev/nvme0n1p1    523248     6236    517012   2% /boot/efi
+tmpfs             789620     2520    787100   1% /run/user/1000
+user@saboor-k:~/Desktop$ cat>newfile
+hello
+^C
+user@saboor-k:~/Desktop$ rm newfile
+user@saboor-k:~/Desktop$ touch newfile
+user@saboor-k:~/Desktop$ rm newfile
+user@saboor-k:~/Desktop$ history
+    1  gcc substring.c
+    2  clear
+    3  gcc substring.c
+    4  clear
+    5  gcc substring.c
+    6  clear
+    7  gcc substring.c
+    8  cleaf
+    9  clear
+   10  gcc substring.c
+
+
+
+
+user@saboor-k:~$ gerp -c 'unix' gerpfile.txt
+Command 'gerp' not found, did you mean:
+  command 'grep' from deb grep (3.11-2)
+Try: sudo apt install <deb name>
+user@saboor-k:~$ grep -c 'unix' grepfile.txt
+2
+user@saboor-k:~$ grep -h 'unix' grepfile.txt
+linux and unix commands
+this is unix    
+user@saboor-k:~$ grep -l 'unix' grepfile.txt
+grepfile.txt
+user@saboor-k:~$ grep -n 'unix' grepfile.txt
+2:linux and unix commands
+3:this is unix    
+user@saboor-k:~$ grep -v 'unix' grepfile.txt
+wellcome to ubuntu  
+rgukt is one of the greatest university
+
+user@saboor-k:~$ grep -e 'unix' grepfile.txt
+linux and unix commands
+this is unix    
+user@saboor-k:~$ grep -o 'unix' grepfile.txt
+unix
+unix
+user@saboor-k:~$ sed 's/rgukt/mlrit/' grepfile.txt
+wellcome to ubuntu  
+linux and unix commands
+this is unix    
+mlrit is one of the greatest university
+
+user@saboor-k:~$ sed 's/is/ese/2' grepfile.txt
+wellcome to ubuntu  
+linux and unix commands
+this ese unix    
+rgukt is one of the greatest university
+
+user@saboor-k:~$ sed 's/ese/is/2' grepfile.txt
+wellcome to ubuntu  
+linux and unix commands
+this is unix    
+rgukt is one of the greatest university
+
+user@saboor-k:~$ sed 's/linux/LINUX/g' grepfile.txt
+wellcome to ubuntu  
+LINUX and unix commands
+this is unix    
+rgukt is one of the greatest university
+
+user@saboor-k:~$ sed '2s/linux/LINUX/g' grepfile.txt
+wellcome to ubuntu  
+LINUX and unix commands
+this is unix    
+rgukt is one of the greatest university
+
+user@saboor-k:~$ sed '2s/linux/LINUX/2g' grepfile.txt
+wellcome to ubuntu  
+linux and unix commands
+this is unix    
+rgukt is one of the greatest university
+
+user@saboor-k:~$ sed '2d' grepfile.txt
+wellcome to ubuntu  
+this is unix    
+rgukt is one of the greatest university
+
+user@saboor-k:~$ sed '/unix/d' grepfile.txt
+wellcome to ubuntu  
+rgukt is one of the greatest university
+
+user@saboor-k:~$ sed '$d' grepfile.txt
+wellcome to ubuntu  
+linux and unix commands
+this is unix    
+rgukt is one of the greatest university
+user@saboor-k:~$ sed 's/unix/linux/p' grepfile.txt
+wellcome to ubuntu  
+linux and linux commands
+linux and linux commands
+this is linux    
+this is linux    
+rgukt is one of the greatest university
+
+user@saboor-k:~$ sed '$d' grepfile.txt
+wellcome to ubuntu  
+linux and unix commands
+this is unix    
+rgukt is one of the greatest university
+user@saboor-k:~$ cat file2.txt
+cat: file2.txt: No such file or directory
+user@saboor-k:~$ cat>file2.txt
+abhishek                           
+chitransh
+satish
+rajan
+naveen
+divyam
+harsh^C
+user@saboor-k:~$ sort file2.c
+sort: cannot read: file2.c: No such file or directory
+user@saboor-k:~$ sort file2.txt
+abhishek
+chitransh
+divyam
+naveen
+rajan
+satish
+user@saboor-k:~$ sort -r file2.txt
+satish
+rajan
+naveen
+divyam
+chitransh
+abhishek
+user@saboor-k:~$ sort -o file2.txt
+^C  
+user@saboor-k:~$ cat>file3.txt
+12
+14
+11
+9
+15
+8
+2
+4
+1
+3
+^C
+user@saboor-k:~$ sort -r file3.txt
+9
+8
+4
+3
+2
+15
+14
+12
+11
+1
+user@saboor-k:~$ cat>file4.txt
+4
+5
+3
+6
+2
+7
+1
+9
+8
+0
+^C
+user@saboor-k:~$ sort file4.txt
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+user@saboor-k:~$ sort -r  file4.txt
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+user@saboor-k:~$ sort -n  file4.txt
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+user@saboor-k:~$ sort -nr  file4.txt
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+user@saboor-k:~$ sort -c  file4.txt
+sort: file4.txt:3: disorder: 3
+user@saboor-k:~$ sort -n  file4.txt
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+user@saboor-k:~$ sort -c  file4.txt
+sort: file4.txt:3: disorder: 3
+user@saboor-k:~$ sort -u  file4.txt
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+user@saboor-k:~$ cat>file4.txt
+^C
+user@saboor-k:~$ cat>file5.txt
+january
+march
+february    
+april
+june
+may
+july
+september
+october
+december
+november
+^C
+user@saboor-k:~$ sort   file5.txt
+april
+december
+february
+january
+july
+june
+march
+may
+november
+october
+september
+user@saboor-k:~$ sort -m  file5.txt
+january
+march
+february
+april
+june
+may
+july
+september
+october
+december
+november
+user@saboor-k:~$ sort -M  file5.txt
+january
+february
+march
+april
+may
+june
+july
+september
+october
+november
+december
+user@saboor-k:~$ sort -c  file5.txt
+sort: file5.txt:3: disorder: february
+user@saboor-k:~$ chmod u+x file5.txt
+user@saboor-k:~$ chmod go-x file5.txt
+user@saboor-k:~$ chmod a=rwx file5.txt
+user@saboor-k:~$ chmod a=w file5.txt
+user@saboor-k:~$ chmod ugo=w file5.txt
+user@saboor-k:~$ chmod go-r file5.txt
+user@saboor-k:~$ chmod go+r file5.txt
+user@saboor-k:~$ chmod go+rx file5.txt
+user@saboor-k:~$ chmod go=r file5.txt
+user@saboor-k:~$ chmod a=rwx file5.txt
+user@saboor-k:~$ chmod u+x file5.txt
+user@saboor-k:~$ chmod go-r file5.txt
+user@saboor-k:~$ chmod go-r file5.txt
+user@saboor-k:~$ chmod u=r file5.txt
+user@saboor-k:~$ chmod ugo=w file5.txt
+user@saboor-k:~$ cat>file6.txt
+ajay manager account 45000
+sunil clerk account 25000
+varun manager sales 50000
+amit manager account 47000
+tarun peon sales 15000
+deepak clerk sales 23000
+sunil peon sales 13000
+satvik director purchase 80000
+user@saboor-k:~$ grep '$d' file5.txt
+grep: file5.txt: Permission denied
+user@saboor-k:~$ grep '$d' file6.txt
+user@saboor-k:~$ grep '$d' file6.txt
+user@saboor-k:~$ awk '/manager/ {print}' file6.txt
+ajay    manager  account  45000
+varun   manager  sales    50000
+amit    manager  account  47000
+user@saboor-k:~$ awk '{print $0}' file6.txt
+ajay    manager  account  45000
+sunil   clerk    account  25000
+varun   manager  sales    50000
+amit    manager  account  47000
+tarun   peon     sales    15000
+deepak  clerk    sales    23000
+sunil   peon     sales    13000
+satvik  director purchase 80000
+user@saboor-k:~$ awk '{print NR,$0}' file6.txt
+1 ajay    manager  account  45000
+2 sunil   clerk    account  25000
+3 varun   manager  sales    50000
+4 amit    manager  account  47000
+5 tarun   peon     sales    15000
+6 deepak  clerk    sales    23000
+7 sunil   peon     sales    13000
+8 satvik  director purchase 80000
+user@saboor-k:~$ awk '{print $2}' file6.txt
+manager
+clerk
+manager
+manager
+peon
+clerk
+peon
+director
+user@saboor-k:~$ awk '{print $1,$4}' file6.txt
+ajay 45000
+sunil 25000
+varun 50000
+amit 47000
+tarun 15000
+deepak 23000
+sunil 13000
+satvik 80000
+user@saboor-k:~$ awk '{print NR}' file6.txt
+1
+2
+3
+4
+5
+6
+7
+8
+user@saboor-k:~$ awk free -M
+awk: cannot open -M (No such file or directory)
+user@saboor-k:~$ awk '/Mem/{print}/' free -m
+awk: line 1: runaway regular expression / ...
+user@saboor-k:~$ awk '/Mem/ {print}/' free -m
+awk: line 1: runaway regular expression / ...
+user@saboor-k:~$ shutdown -r +5
+Reboot scheduled for Thu 2024-03-28 18:27:16 IST, use 'shutdown -c' to cancel.
+user@saboor-k:~$ shutdown -c
+user@saboor-k:~$ shutdown -r +5 reboot
+Reboot scheduled for Thu 2024-03-28 18:28:01 IST, use 'shutdown -c' to cancel.
+user@saboor-k:~$ shutdown -c
+user@saboor-k:~$ sudo shutdown 19:00
+[sudo] password for user: 
+Shutdown scheduled for Thu 2024-03-28 19:00:00 IST, use 'shutdown -c' to cancel.
+user@saboor-k:~$ shutdown -c
+user@saboor-k:~$ sudo shutdown +10
+Shutdown scheduled for Thu 2024-03-28 18:34:14 IST, use 'shutdown -c' to cancel.
+user@saboor-k:~$ shutdown -c
+user@saboor-k:~$ shutdown -H
+Failed to schedule shutdown: Interactive authentication required.
+user@saboor-k:~$ shutdown -P
+Shutdown scheduled for Thu 2024-03-28 18:25:53 IST, use 'shutdown -c' to cancel.
+user@saboor-k:~$ shutdown -c
+user@saboor-k:~$ 
+
+
